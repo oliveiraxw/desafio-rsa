@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "eaf9d10f-af37-441d-97c9-e9bd662aaf16",
+		"name": "Desafio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar um usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ChavePublica",
+						"value": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmnJlxMXQsozgisLMsRxkpVKKhSWoNuJ9JRZ/u1KqidyELlM5bbPyKY8TXy1/9x2hupOFBGZoCb4oNM//usUOGVsxF5RtQ7k1ghPHLB48UZ6gOlO0A/7+JsHFiUkD1CjrwwEwKavgf1vPO7cI5mbL1Tfg0bEgXmrQfo3S+DozYSGLoNUCJoJFtvTvXAZDyf1AfiTkR7OqWquBQeh8mSvfllKiFtps4kTD7g7HRK7TJXASYu4f0/ybjyyc0g0VSuX1zKo2IuWuCwnrDkcjo9He6LcEWna6Ku1a6n0o3GyzT4mIcRwSmSRqlj0RPJrORoh4+gRwv4OUf4rpRApEVkIWxQIDAQAB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"joao@email.com\",\r\n    \"nome\" : \"João\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/desafio/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todos os usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/desafio/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Email",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"novoEmail\" : \"joao@novoemail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/desafio/usuario/1/email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"usuario",
+						"1",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar usuário",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/desafio/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Nome",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"novoNome\" : \"João da Silva\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/desafio/usuario/1/nome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"usuario",
+						"1",
+						"nome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar usuário por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/desafio/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calcular Dígito Único",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"n\" : \"9875\",\r\n    \"k\" : 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/desafio/digitoUnico/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"digitoUnico",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientSide - Gerar Par de Chaves RSA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/desafio/cliente/parChaves",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"cliente",
+						"parChaves"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientSide - Descriptografar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ChavePrivada",
+						"value": "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCacmXExdCyjOCKwsyxHGSlUoqFJag24n0lFn+7UqqJ3IQuUzlts/IpjxNfLX/3HaG6k4UEZmgJvig0z/+6xQ4ZWzEXlG1DuTWCE8csHjxRnqA6U7QD/v4mwcWJSQPUKOvDATApq+B/W887twjmZsvVN+DRsSBeatB+jdL4OjNhIYug1QImgkW29O9cBkPJ/UB+JORHs6paq4FB6HyZK9+WUqIW2mziRMPuDsdErtMlcBJi7h/T/JuPLJzSDRVK5fXMqjYi5a4LCesORyOj0d7otwRadroq7VrqfSjcbLNPiYhxHBKZJGqWPRE8ms5GiHj6BHC/g5R/iulECkRWQhbFAgMBAAECggEASJgEpZylH4d/8zjkpUrHM728RiERE9sZH1mX6CBO8EWqC2wqzhmKdWY+oLnuL+TJo7y7BPptZEbw9wHdHZiJq/lk9cRaJz7im6VYNLBxgZuhjEjTkB1GsEjb5E9hcVNanWntjWiwOKyal2LM2B7xJ+L/1RAAOuDR5uoag3o3tCso1IXNgrut4A6zkH+n+UdO5zogin+HnHLwZLL8WyEhJaqBgXX2LK+Ia7qmIxlSN4chBRgc92FWgz7C0+5HG8gL/TYsnhzb7x16H+k1A3MSV10TRI9jBnh6X93sP2tLmg8XS688qQR8xHisgrcBtN/xDweRjh5SCpwUSg5PyfvtAQKBgQDWdQP/RZbqDmj/pAK/wCkaGpwO5jHpDdME4XOsWIwSRTmDyRmREvZ6GQwxt6+oMPyRpDL8JdvZ668IVTsvtIvnCrImfOYmdLJw7DOV2I9XsuHVWMs1bU7gLcV9qpSEckwiUEhd5VoW9S5xyVMkQkJDsroM3KcydEagnEBYNyG/0QKBgQC4XXVx1l8i6m2n2vVAN09x0/wvy4y1IjUopGAxxKadSp5k6TMMp3eZfLFS/CF2ioeTqHt/CNxT5oerIvTXtUY2vOXtxaH36ebGYTWWIeOSqJ+st0BZLXvmeRmRFpbnLqlTbEQpg5zNje5FEbenhkWPeUgw+l1DOHV1Ycq0cCP4tQKBgBf0CfZBN5H8+g1TrFrug6i+wB+J5pk5ShCJffoKCdsgkEP/+jMSAyWwFoSXF6+ZiRxbUraHI/87K9mqa2nwqI+tyigyWyKAdk3WlAxwm9IX0NGbkVbuVpkDg8N9ggkpGwfaH7sdGurlh8J90iOCoxQcqls1ahdglWLrEOTJg6OBAoGAHoOhb6D6iA3i7lhIJUPCS2W5pLN863Ho+HwUS8hvhzMVekA6qcqB+g5wTvraEwOkouTM4960kNJj/AhCG/2tzFuBdtQyFZVKE+V8+AdN4jU0kGKYLOphSmkauS/S9Bp9/ge6VGCrMD5ghGAFVJ3dn3yEXU7i5sBOeIoiAbFZ0s0CgYBWcuXhEaPbAlt+MRLaS5Stap+1YiiJLneBTg3FpKiFvbkzdtqD3dYUQ/XKSRPEKX50vXTE6N7QTl+xWBEfguX8Vzb5Yr9J6yiGb60yBsYvnN1W+HudJPh45c+DUXx3CwlMz2rtZkmKUwkgHjq0SChCjTRvRYnrV//kgXnxUW/9+A==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"informacaoCriptografada\" : \"JzjeVthjK6gd2wZyPs9n5hYn0WrGxqx4iPWz/xGYwDHeJZo3jMIwnrYMSzTvlT5VmKJUYXH+zR4Yc+hOH3/BWhkor2Hv7vdGEiPVNMaSnvufW20xozX8CEckXVU0u9vrE1ZG1KLYy+VP+HiVyHnx3RAc74yZtfGz0U1u06QNZSJnycOF8IFL+NdX1QYOjegPgmdfIPDRh64QhXRtJAwKXWIvV1NZrKUOESvwulIpEXdtavY93YKss5DuVttVGGqJooYDCMKAJPh3Xdqmsb34UPEWdp+8u3Mxw2LId7mKJwuefdNkvzXqN4nw/2LJF9YAibDAn0pseJFnq16HajsK3w==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/desafio/cliente/descriptografia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"cliente",
+						"descriptografia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar Cálculos do Dígito Único",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/desafio/digitoUnico/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"desafio",
+						"digitoUnico",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
